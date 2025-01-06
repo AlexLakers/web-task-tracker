@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS account
                                 );
 
 
-CREATE TABLE account_role
+CREATE TABLE IF NOT EXISTS account_role
 (
     role_id  INT NOT NULL REFERENCES role(id) ON DELETE CASCADE,
     account_id bigint  NOT NULL REFERENCES  account ON DELETE CASCADE
