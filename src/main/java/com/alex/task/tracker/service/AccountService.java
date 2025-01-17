@@ -40,8 +40,8 @@ public final class AccountService {
 
     private static AccountService initAccountService() {
         return new AccountService(AccountMapper.getInstance(),
-                AccountRepository.getInstance());
-
+                AccountRepository.getInstance(),
+                PermissionService.getInstance());
     }
 
     public static AccountService getInstance() {
@@ -50,6 +50,7 @@ public final class AccountService {
 
     private final AccountMapper accountMapper;
     private final AccountRepository accountRepository;
+    private final PermissionService permissionService;
 
     /**
      * Returns id of created account by input {@link AccountCreationDto dto}.
@@ -69,6 +70,7 @@ public final class AccountService {
     public Long createAccount(AccountCreationDto dto) {
         log.debug("The method of creation user with input data: {} has been started", dto);
         //validation
+        permissionService.saveDefaultRoleAndPermissionsIfNotExist();
         var validatorFactory = Validation.buildDefaultValidatorFactory();
         var validator = validatorFactory.getValidator();
         var violations = validator.validate(dto);
@@ -243,3 +245,4 @@ public final class AccountService {
 
 
 }
+
