@@ -1,3 +1,42 @@
 span{
     color: black;
 }
+
+h2,form{
+    text-align: center;
+}
+.\.filter{
+    text-align: center;
+}
+.\.error{
+    color: red;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    color: black;
+    /* Растягиваем body по высоте html */
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    background: wheat;
+}
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    background: blanchedalmond;
+}
+
+footer {
+    background: blue;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+<Appenders>
+    <Console name="LogToConsole" target="SYSTEM_OUT">
+        <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+   <!-- <File name="LogToFile" fileName="${env:CATALINA_HOME}/logs/app.log">
+        &lt;!&ndash;${catalina.home}&ndash;&gt;
+        <PatternLayout>
+            <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+        </PatternLayout>
+    </File>-->
+    <RollingFile name="LogToFile" filePattern="${env:CATALINA_HOME}/logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log">
+        <PatternLayout>
+            <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+        </PatternLayout>
+        <Policies>
+            <TimeBasedTriggeringPolicy />
+            <SizeBasedTriggeringPolicy size="10 MB" />
+        </Policies>
+    </RollingFile>
+</Appenders>
+<Loggers>
+    <!--<Logger name="alex" level="debug" additivity="false">
+        <AppenderRef ref="LogToFile"/>
+        <AppenderRef ref="LogToConsole"/>
+    </Logger>
+    <Logger name="org.springframework.boot" level="error" additivity="false">
+        <AppenderRef ref="LogToConsole"/>
+    </Logger>-->
+    <Root level="info">
+        <AppenderRef ref="LogToConsole"/>
+        <AppenderRef ref="LogToFile"/>
+    </Root>
+    <Logger name="com.alex.task.manager" level="debug" additivity="false">
+        <AppenderRef ref="LogToConsole"/>
+    </Logger>
+</Loggers>
+</Configuration>
