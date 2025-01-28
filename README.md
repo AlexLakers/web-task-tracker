@@ -1,7 +1,6 @@
 # web-task-tracker
 This is a multi-page task managment app with athorization and authentication.
  It allows to make general task actions that depends on a role and permissions.
-
 ## Description
 You as a user of this app can create your own tasks with different attriburtes, for example you can choise a specific task performer 
 or to set task priority,status and so on. But maybe some user want to assigh his task to you for performing and it possible too.
@@ -89,3 +88,21 @@ The ***app-container***(by Dockerfile-own image by alpine):
  ```
 docker run --name app -p 8085:8080 -e HIBERNATE_CONNECTION_URL=jdbc:postgresql://database:5632/task_manager_repository -d --network=backend-net web-task-tracker:1.0
  ```
+***Bellow you can see the refs to all the neccessary  lib:***
+
+> [!IMPORTANT]
+> - "Hibernate ORM Hibernate Core » 6.5.2.Final" https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core/6.5.2.Final
+> - "Testcontainers Core 1.20.4" https://mvnrepository.com/artifact/org.testcontainers/testcontainers/1.20.4
+> - "Jakarta Servlet 6.0.0" https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api/6.0.0
+> - "PostgreSQL JDBC Driver » 42.7.3" https://mvnrepository.com/artifact/org.postgresql/postgresql/42.7.3
+> - "Project Lombok 1.18.34" https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.34
+> - ***The additional libs for unit-tests and logging:***
+> - "Apache Log4j  1.2.17" https://mvnrepository.com/artifact/log4j/log4j/1.2.17
+> - "JUnit Jupiter API 5.11.0" https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+> - "Mockito JUnit Jupiter 5.11.0" https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter
+> - "JUnit Jupiter Engine 5.11.0" https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
+> - "JUnit Jupiter Params 5.11.0" https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+> - "Mockito Core 5.11.0" https://mvnrepository.com/artifact/org.mockito/mockito-core
+> - ***And some libs for using jstl:***
+> - "Jakarta Standard Tag Library Implementation 2.0.0" https://mvnrepository.com/artifact/org.mockito/mockito-core
+> - "Jakarta Standard Tag Library API » 3.0.0" https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api/3.0.0
