@@ -7,6 +7,16 @@ or to set task priority,status and so on. But maybe some user want to assigh his
 This app represents web interface as a frontend part to interect with a server part of this app. 
 Of course, the main priority was backend.You can use it for base to make something more or use out of box - it is your choise.
 
+## About security.
+As you see the url can be private or public and for checking it I used 'Filter' by jakarta.servlet.
+It used for pre-checking account role too to evaluate a primary opportunity for using functional of this app(Controller checking).
+After pre-checking will be performed a full-checking logged account and for it used special service which checks role and  
+permissions in depending on the operation with task (Service checking).
+For example, the updating task operation can perform only account as a role 'ADMIN'.
+Moreover occurs the checking permissions of this role, in this case role should have permission 'UPDATE'.
+
+![alt text](https://github.com/AlexLakers/ParserJsonCsvToXml/blob/master/WinFormsCsvJsonXml/App_Data/pictures/16.png?raw=true)
+
 ## How does it works?
 I want to tell you about web-task-tracker in more detail.
 If you visit the main page you can see **the following buttons:** 'login',logout,'registration' which 
@@ -35,13 +45,6 @@ You can enter corresponding params and **find all the tasks** using this params.
 If you want to **create a new task** for execution you must fill the fallowing form:
 
 ![alt text](https://github.com/AlexLakers/ParserJsonCsvToXml/blob/master/WinFormsCsvJsonXml/App_Data/pictures/30.png?raw=true)
-## About security.
-As you see the url can be private or public and for checking it I used 'Filter' by jakarta.servlet.
-It used for pre-checking account role too to evaluate a primary opportunity for using functional of this app(Controller checking).
-After pre-checking will be performed a full-checking logged account and for it used special service which checks role and  
-permissions in depending on the operation with task (Service checking).
-For example, the updating task operation can perform only account as a role 'ADMIN'.
-Moreover occurs the checking permissions of this role, in this case role should have permission 'UPDATE'.
 
 ## About interaction with the database and transactions.
 The interaction process with the database occurs using ORM Framework Hibernate that allows
