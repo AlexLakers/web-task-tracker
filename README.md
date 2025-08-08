@@ -29,8 +29,6 @@ This app has the **fallowing URL-pathes:**
 '/tasks/delete','/tasks/update','tasks/create' - the private url set for different actions with tasks.
 '/registration','/login','/logout' - the public url set for actions with user session and registration.
 
-![alt text](https://github.com/AlexLakers/ParserJsonCsvToXml/blob/master/WinFormsCsvJsonXml/App_Data/pictures/19.png?raw=true)
-
 For example,some user decided to use this app. Firstly, he should to visit the main page and finished
 all the steps for registration process.Pay attemption to this app have validation your input data and if you enter incorrect data thus you can see **corresponding errors.**
 
@@ -40,7 +38,7 @@ Secondary you as a authenticated user will be redirected to your own page with t
 In here you can see your own tasks and tasks which was assighned to you as a performer. This page also show tasks using dynamic filter.
 You can enter corresponding params and **find all the tasks** using this params.
 
-![alt text](https://github.com/AlexLakers/ParserJsonCsvToXml/blob/master/WinFormsCsvJsonXml/App_Data/pictures/29.png?raw=true)
+![alt text](https://github.com/AlexLakers/ParserJsonCsvToXml/blob/master/WinFormsCsvJsonXml/App_Data/pictures/20.png?raw=true)
 
 If you want to **create a new task** for execution you must fill the fallowing form:
 
