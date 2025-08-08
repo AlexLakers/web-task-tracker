@@ -18,6 +18,9 @@ This app has the **fallowing URL-pathes:**
  '/tasks'** - the url of a specific account private page,
 '/tasks/delete','/tasks/update','tasks/create' - the private url set for different actions with tasks.
 '/registration','/login','/logout' - the public url set for actions with user session and registration.
+
+![alt text](https://github.com/AlexLakers/ParserJsonCsvToXml/blob/master/WinFormsCsvJsonXml/App_Data/pictures/19.png?raw=true)
+
 For example,some user decided to use this app. Firstly, he should to visit the main page and finished
 all the steps for registration process.Pay attemption to this app have validation your input data and if you enter incorrect data thus you can see **corresponding errors.**
 
